@@ -1,3 +1,5 @@
+package dataStructures;
+
 public class MyMap<K, V> {
     private Entry<K, V>[] buckets;
     private int capacity; // 16

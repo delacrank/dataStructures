@@ -1,3 +1,5 @@
+package hackerRank;
+
 class HourGlass {
     
     public static void main(String[] args) {

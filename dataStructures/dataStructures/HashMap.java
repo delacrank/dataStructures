@@ -1,3 +1,5 @@
+package dataStructures;
+
 class HashEntry {
 
     int key;
@@ -47,21 +49,5 @@ public class HashMap {
 	}
         table[hash] = new HashEntry(key, value);
     }
-
-    public static void main(String[] args) {
-
-	HashMap map = new HashMap();
-	map.put(1, 1);
-	map.put(2, 1);
-	map.put(3, 1);
-	map.put(4, 1);
-	map.put(5, 1);
-	map.put(129, 4);
-
-	System.out.println(map.get(129));
-
-	
-    }
-
 
 }	   
