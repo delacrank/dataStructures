@@ -1,6 +1,6 @@
 package dataStructures;
 
-class BinaryTree {
+public class BinaryTree {
 
 	BTNode root;
 
@@ -22,16 +22,20 @@ class BinaryTree {
 			traverse(node.right);
 		}
 	}
+	
+	static class BTNode {
 
-}
+		int value;
+		BTNode left;
+		BTNode right;
+		
+		public BTNode() {}
 
-class BTNode {
-
-	int value;
-	BTNode left;
-	BTNode right;
-
-	BTNode(int value) {
-		this.value = value;
+		public BTNode(int value) {
+			this.value = value;
+		}
 	}
+
 }
+
+

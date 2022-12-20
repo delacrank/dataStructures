@@ -1,6 +1,6 @@
 package dataStructures;
 
-class LinkedList {
+public class LinkedList {
 
 	LLNode head;
 	LLNode tail;
@@ -50,14 +50,16 @@ class LinkedList {
 			temp = temp.next;
 		}
 	}
+	
+	static class LLNode {
+		public LLNode next;
+		public int data;
 
-}
-
-class LLNode {
-	public LLNode next;
-	public int data;
-
-	LLNode(int data) {
-		this.data = data;
+		LLNode(int data) {
+			this.data = data;
+		}
 	}
+
 }
+
+

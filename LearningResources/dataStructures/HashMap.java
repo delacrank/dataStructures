@@ -1,18 +1,5 @@
 package dataStructures;
 
-class HashEntry {
-
-    int key;
-    int value;
-
-    HashEntry(int key, int value) {
-	this.key = key;
-	this.value = value;
-    }
-    
-    
-}
-
 public class HashMap {
 
     HashEntry[] table;
@@ -50,4 +37,17 @@ public class HashMap {
         table[hash] = new HashEntry(key, value);
     }
 
+    class HashEntry {
+
+        int key;
+        int value;
+
+        HashEntry(int key, int value) {
+    	this.key = key;
+    	this.value = value;
+        }
+        
+        
+    }
+    
 }	   
