@@ -1,6 +1,6 @@
 package javaAlgos;
 
-public class Testing {
+public class Histogram {
 
 	
 	public static int[] histogram(int[] a, int m) {

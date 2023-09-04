@@ -1,22 +1,8 @@
+package dataStructures;
+
 import java.util.Iterator;
 
-public class Main {
-	
-	public static void main(String[] args) {
-		
-		Stack<Integer> sList = new Stack<Integer>(10);
-		
-		sList.push(5);
-		sList.push(6);
-		
-		for(Integer s : sList) {
-			System.out.println(s);
-		}
-	}
-	
-}
-
-class Stack<Item> implements Iterable<Item> {
+public class Stack<Item> implements Iterable<Item> {
 	
 	Item[] a;
 	int n;
@@ -47,6 +33,5 @@ class Stack<Item> implements Iterable<Item> {
 		public Item next() { return a[i--]; }
 		public void remove() { }
 	}
-	
-	
+
 }
