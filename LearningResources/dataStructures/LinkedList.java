@@ -6,7 +6,7 @@ public class LinkedList {
 	LLNode tail;
 	int size;
 
-	void Insert(int data) {
+	public void Insert(int data) {
 		LLNode node = new LLNode(data);
 		if (head == null) {
 			head = node;
@@ -19,16 +19,23 @@ public class LinkedList {
 			temp.next = node;
 			size++;
 		}
+		System.out.println("Node: " + node);
+		System.out.println("Head: " + head);
 	}
 
-	void InsertInFront(int data) {
+	public void InsertInFront(int data) {
 		LLNode node = new LLNode(data);
 		node.next = head;
 		head = node;
 		size++;
+		System.out.println("Node: " + node);
+		System.out.println("Node Next: " + node.next);
+		System.out.println("Head: " + head);
+		System.out.println("Head Next: " + head.next);
+		
 	}
 
-	void Remove(int data) {
+	public void Remove(int data) {
 		LLNode temp = head;
 		if (temp.data == data) {
 			head = head.next;
@@ -43,7 +50,7 @@ public class LinkedList {
 		}
 	}
 
-	void Print() {
+	public void Print() {
 		LLNode temp = head;
 		while (temp != null) {
 			System.out.println(temp.data);

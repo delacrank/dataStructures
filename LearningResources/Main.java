@@ -1,52 +1,28 @@
-import java.util.Iterator;
+import dataStructures.Stack;
+import sortingAlgorithms.QuickUnion;
+
+import java.util.Arrays;
+
+import dataStructures.LinkedList;
 
 public class Main {
 	
+	
 	public static void main(String[] args) {
+		int [] a = { 4, 3, 6, 9, 2, 8, 5, 7, 6, 1, 6};
+		int [] b = { 3, 8, 5, 4, 1, 9, 0, 2, 1, 0, 7};
+		int n = a.length;
 		
-		Stack<Integer> sList = new Stack<Integer>(10);
+		QuickUnion qn = new QuickUnion(n);
 		
-		sList.push(5);
-		sList.push(6);
-		
-		for(Integer s : sList) {
-			System.out.println(s);
+		for(int i = 0; i < n; i++) {
+			int p = a[i];
+			int q = b[i];
+			if(qn.connected(p, q)) continue;
+			qn.union(p, q);
+			System.out.println(p + q);
 		}
+		
 	}
-	
-}
-
-class Stack<Item> implements Iterable<Item> {
-	
-	Item[] a;
-	int n;
-	
-	Stack(int capacity) {
-		a = (Item[]) new Object[capacity];
-	}
-	
-	public int size() {
-		return n;
-	}
-	
-	public void push(Item value) {
-		a[n++] = value;
-	}
-	
-	public Item pop() {
-		return a[n--];
-	}
-
-	public Iterator<Item> iterator() {
-		return new ReverseArrayIterator();
-	}
-	
-	private class ReverseArrayIterator implements Iterator<Item> {
-		private int i = n-1;
-		public boolean hasNext() { return i >= 0; }
-		public Item next() { return a[i--]; }
-		public void remove() { }
-	}
-	
 	
 }
